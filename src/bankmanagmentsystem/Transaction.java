@@ -127,15 +127,17 @@ public class Transaction extends JFrame implements ActionListener {
             // Open fast cash window or dialog
         } else if (e.getSource() == miniStatement) {
             // Handle Mini Statement action
-            JOptionPane.showMessageDialog(null, "Mini Statement selected");
+            new Ministatement(pinNumber).setVisible(true);
             // Open mini statement window or dialog
         } else if (e.getSource() == pinChange) {
             // Handle Pin Change action
-            JOptionPane.showMessageDialog(null, "Pin Change selected");
+            setVisible(false);
+            new ChangePin(pinNumber).setVisible(true);
             // Open pin change window or dialog
         } else if (e.getSource() == balanceEnquiry) {
             // Handle Balance Enquiry action
-            JOptionPane.showMessageDialog(null, "Balance Enquiry selected");
+            setVisible(false);
+            new BalanaceEnquiry(pinNumber).setVisible(true);
             // Open balance enquiry window or dialog
         } else if (e.getSource() == moreServices) {
             // Handle More Services action

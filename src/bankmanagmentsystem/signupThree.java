@@ -199,12 +199,12 @@ public class signupThree extends JFrame implements ActionListener{
                     String pin = generatePinNumber();  // Assuming generatePinNumber() method exists
     
                     String q1 = "INSERT INTO signupThree (formno, accountType, cardNumber, pin, facilities) VALUES ('" + formno + "', '" + accountType + "', '" + cardNumber + "', '" + pin + "', '" + services + "')";
-                    // String q2 = "INSERT INTO login (formno, cardNumber, pin) VALUES ('" + formno + "', '" + cardNumber + "', '" + pin + "')";
+                    String q2 = "INSERT INTO login (formno, cardNumber, pin) VALUES ('" + formno + "', '" + cardNumber + "', '" + pin + "')";
                     c1.s.executeUpdate(q1);
-                    // c1.s.executeUpdate(q2);
+                    c1.s.executeUpdate(q2);
                     JOptionPane.showMessageDialog(null, "Card Number: " + cardNumber + "\n Pin: " + pin);
     
-                    // new Deposit(pin).setVisible(true);
+                    new Deposit(pin).setVisible(true);
                     setVisible(false);
                 }
             } else if (e.getSource() == cancelButton) {
