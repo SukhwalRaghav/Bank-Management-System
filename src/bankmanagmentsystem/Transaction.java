@@ -112,15 +112,18 @@ public class Transaction extends JFrame implements ActionListener {
     public void actionPerformed(ActionEvent e) {
         if (e.getSource() == deposit) {
             // Handle Deposit action
-            JOptionPane.showMessageDialog(null, "Deposit selected");
+            setVisible(false);
+            new Deposit(pinNumber).setVisible(true);
             // Open deposit window or dialog
         } else if (e.getSource() == cashWithdrawal) {
             // Handle Cash Withdrawal action
-            JOptionPane.showMessageDialog(null, "Cash Withdrawal selected");
+            setVisible(false);
+            new Withdrawal(pinNumber).setVisible(true);
             // Open cash withdrawal window or dialog
         } else if (e.getSource() == fastCash) {
             // Handle Fast Cash action
-            JOptionPane.showMessageDialog(null, "Fast Cash selected");
+            setVisible(false);
+            new FastCash(pinNumber).setVisible(true);
             // Open fast cash window or dialog
         } else if (e.getSource() == miniStatement) {
             // Handle Mini Statement action
